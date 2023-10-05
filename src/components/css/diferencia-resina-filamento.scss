@@ -1,0 +1,162 @@
+/*---------------------------------------------------------------------------------------- */
+/*-------------------------- Variables --------------------------------- */
+/*---------------------------------------------------------------------------------------- */
+
+    $fondo-circulo-violeta: blueviolet;
+    $letras-titulo: blueviolet;
+    $letras-responsive: #bb00ff;
+    $borde-titulo: 0.3vw solid #000000;
+    $numero-circulo-violet: white;
+    $sombra-circulo-violeta: 0 0 6px 0 rgba(0, 0, 0, .5);
+
+
+/*---------------------------------------------------------------------------------------- */
+/*-------------------------- Imagen Diferencia entre "Resina" y "Filamento" --------------------------------- */
+/*---------------------------------------------------------------------------------------- */
+
+.sobre-nosotros{
+    .titulo-diferencia{
+        color: $letras-titulo; 
+        font-weight:bold; 
+        padding:15px; 
+        margin-top:1.2em;
+        margin-bottom:40px;
+        text-align:center;
+        font-size: clamp(1rem, 5.5rem, 4.5vw);
+        border-radius:10px;
+        font-family: 'Rubik';  
+    }
+
+    .contenedor-sobre-nosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1rem;
+
+        .imagen-about-us{
+                width: 40%;
+        }
+
+        .contenidos-textos{
+            display: flex;    
+            justify-content: center;
+            flex-direction: column;  /*para que el texto se escriba uno bajo el otro*/
+
+            .imagen-resina{
+                display: none;
+            }
+
+            h3{
+                font-size: clamp(1rem, 3.5rem, 3vw);
+                font-weight:bold;
+                
+                span{     /*circulo violeta*/
+                    background:$fondo-circulo-violeta ;
+                    color: $numero-circulo-violet;
+                    border-radius: 50%;     /*para que sea redondo*/
+                    display: inline-block;  /*propiedad de bloque*/
+                    text-align: center;
+                    width: clamp(1rem, 5rem, 4vw);
+                    height: clamp(1rem, 5rem, 4vw);
+                    padding: 1px;
+                    box-shadow: $sombra-circulo-violeta;
+                    margin-right: 10px;
+                }
+            }
+            
+            ul{
+                padding: 0.5rem 0rem 0rem 6rem;
+                margin-bottom: 3rem !important;
+                li{
+                    padding-bottom: 0.3rem;
+                    font-family: 'Rubik';
+                    font-size: clamp(1rem, 2rem, 1.5vw);
+                }
+            }
+
+            .imagen-impresora-filamento{
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------- */
+
+
+@media screen and (max-width: 1000px){
+    .sobre-nosotros{
+        .titulo-diferencia{
+            font-size: clamp(3rem, 4.5rem, 5vw); 
+        }
+
+        .contenedor-sobre-nosotros{
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            
+            
+            .imagen-about-us{
+                display: none;
+            }
+            .contenidos-textos{
+                width: 100%; 
+                align-items: center;
+                text-align: center;
+
+                h3{                                          /*Tamaño del titulo*/
+                    color: $letras-responsive;
+                    font-size: clamp(2.5rem, 3.5rem, 9vw);     
+                    
+                    span{     /*circulo violeta*/
+                        display: none;
+                    }
+                
+                }
+                ul{
+                    padding: 0;
+                    margin-bottom: 3rem !important;
+                    li{
+                        padding-bottom: 1rem;
+                        font-family: 'Rubik';
+                        font-size: clamp(1rem, 2rem, 4vw);
+                    }
+                }
+                img{                                 /*pequeña separacion de las imagenes con respecto a los titulos*/
+                    margin-bottom: 20px;
+                }
+                .imagen-resina{                         /*Muestra la imagen de la impresora de resina*/
+                    display: flex;
+                    width: 100%;
+                    min-width: 150px;
+                    max-width: 200px;
+                    justify-content: center;
+                    align-items: center;  
+                }
+                .imagen-impresora-filamento{         /*Muestra la imagen de la impresora de filamento*/
+                    display: flex;
+                    width: 100%;
+                    min-width: 150px;
+                    max-width: 200px;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

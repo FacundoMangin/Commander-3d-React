@@ -1,0 +1,76 @@
+ 
+ /*Que no haya espacios blancos en los bordes */ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body{
+        .contenedor{
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            align-items: center;
+        }
+        .derechos-de-autor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                margin: 0px;
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 1.3rem;
+        
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        transition: all 0.5s ease-in-out;
+        background: #e100ff;
+        border-radius: 1rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1100px){
+    *{
+        body{
+            .contenedor{
+            width: 85%;
+            }   
+        }
+    }
+} 
+
+  
+
+@media (min-width: 2560px) {
+    *{
+        body{
+            .derechos-de-autor{
+                zoom: 1.7;
+            }
+        }
+    }
+}
+
+
+  /*----------------------------------------------------------------*/
+@media (min-width: 3840px) {
+    *{
+        body{
+            .derechos-de-autor{
+                zoom: 2.5;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------------- */
+body #carrusel {
+  padding: 4rem 0;
+  background-color: #e8d5eb;
+  border-top: 5px solid #f1c4f8;
+}
+body #carrusel .contenedor .container {
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+body #carrusel .contenedor .container .centrar_texto {
+  text-align: center;
+  font-family: "Lilita One";
+}
+body #carrusel .contenedor .container .section-titulo {
+  font-size: clamp(2.5rem, 7rem, 15vw);
+  color: blueviolet;
+  padding: 2rem 0;
+  margin: 0px !important;
+}
+body #carrusel .contenedor .container .section-subtitulo {
+  font-size: clamp(1rem, 3.5rem, 7vw);
+  color: rgb(198, 53, 255);
+}
+body #carrusel .contenedor .container .tranding-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .precio-tarjeta {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #ffffff;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #ffffff;
+  background-color: rgba(27, 27, 27, 0.937254902);
+  padding: 1rem;
+  border-radius: 15px;
+  border: 2px solid #d6d6d6;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .tranding-slide-content-bottom .numero-estrellas {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .tranding-slide-content-bottom .numero-estrellas .icono-estrellas ion-icon {
+  color: #ffffff;
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-next {
+  left: 60% !important;
+  transform: translateX(-60%) !important;
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-prev {
+  left: 40% !important;
+  transform: translateX(-40%) !important;
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .slider-arrow {
+  background: #ffffff;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .slider-arrow:after {
+  content: "";
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+body #carrusel .contenedor .boton {
+  display: flex;
+  justify-content: center;
+  font-family: "Lilita One";
+}
+body #carrusel .contenedor .boton a {
+  text-decoration: none;
+  background: blueviolet;
+  color: #ffffff;
+  padding: 12px 45px;
+  margin: 15px;
+  text-transform: uppercase;
+  border: 3px solid #d6d6d6;
+  box-shadow: 6px 2px 6px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: clamp(1.4rem, 3rem, 10vw);
+  transition: all 300ms ease-in-out;
+}
+body #carrusel .contenedor .boton ahover {
+  color: var(--white);
+  transform: scale(1.04);
+}
+
+@media (max-width: 1440px) {
+  body #carrusel {
+    padding: 7rem 0;
+  }
+}
+@media (max-width: 500px) {
+  body #carrusel .contenedor .container .tranding-slider {
+    height: 45rem;
+  }
+}
+@media (max-width: 500px) {
+  body #carrusel .contenedor .container .swiper-wrapper .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  body #carrusel .contenedor .container .swiper-wrapper .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+@media (max-width: 320px) {
+  body #carrusel .contenedor .container .swiper-wrapper .tranding-slide {
+    width: 22rem !important;
+    height: 30rem !important;
+  }
+  body #carrusel .contenedor .container .swiper-wrapper .tranding-slide .tranding-slide-img img {
+    width: 22rem !important;
+    height: 30rem !important;
+  }
+}
+/* Distancia Botones */
+@media (max-width: 1440px) {
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-next {
+    left: 62% !important;
+    transform: translateX(-70%) !important;
+  }
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-prev {
+    left: 38% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+@media (max-width: 990px) {
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+@media (max-width: 450px) {
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+@media (max-width: 376px) {
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-prev {
+    left: 1% !important;
+    transform: translateX(-1%) !important;
+  }
+  body #carrusel .contenedor .container .tranding-slider .tranding-slider-control .swiper-button-next {
+    left: 100% !important;
+    transform: translateX(-100%) !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  body #carrusel .contenedor .boton a {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=carrusel.css.map */

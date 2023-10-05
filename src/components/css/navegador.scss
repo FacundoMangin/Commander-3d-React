@@ -1,0 +1,154 @@
+
+$letras: white;
+$letras-hover: rgb(255, 5, 5);
+$fondo:rgba(92, 0, 95, 0.993);
+$hover: rgba(250, 108, 255, 0.993);
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------- NAVEGACION --------------------------------- */
+/*----------------------------------------------------------------------- */
+
+body {
+    .navbar{
+        background: $fondo;
+        -webkit-box-shadow: inset 7px 4px 38px -25px rgba(255,0,255,1);
+        -moz-box-shadow: inset 7px 4px 38px -25px rgba(255,0,255,1);
+        box-shadow: inset 7px 4px 38px -25px rgba(255,0,255,1);
+        transition: all ease-in-out 250ms;
+
+        .container{
+            height: auto !important;
+            .titulo-logo{
+                .text-commander{
+                    display: flex;
+                    font-size: 2.5rem;
+                    font-size: clamp(1.6rem, 2.5rem, 9vw); 
+                    text-transform: uppercase;
+                    color: $letras;
+                    font-family: 'Lilita One';
+                    text-decoration: none;
+                    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+                }
+            }
+            
+            .navbar-toggler{
+                font-size: clamp(1rem, 2rem, 2.5vw); 
+            }
+
+            #navbarSupportedContent{
+                .navbar-nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    a{
+                        text-decoration: none;
+                        font-size: clamp(1rem, 1.5rem, 1.5vw); 
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: $letras;
+                        font-family: 'Rubik';
+                        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+                        &hover{
+                            color: $hover;
+                            transition: all 300ms ease-in-out;
+                        }                  
+                    }
+                    .nav-link{
+                        padding: 0;
+                    }
+                    .nav-item {
+                        
+                        &:hover {
+                            transform: scale(0.9);
+                            transition: all 400ms ease;
+                        } 
+                        .dropdown-menu{
+                            background-color: #583f69 !important;
+                            padding-left: 10px;
+                            padding-right: 10px;                  
+                            
+                            li{
+                                &:hover {
+                                    transform: scale(1.1);
+                                    transition: all 400ms ease;
+                                }
+                                a{
+                                    font-size: 1.3rem !important;
+                                    img{
+                                        width: 1.8rem;
+                                        padding-right: 0.3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .switch{
+                    background-color: #343d5b;
+                    border-radius: 1000px;
+                    border: none;
+                    position: relative;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    outline: none;
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        background: white;
+                        top: 0;
+                        left: 0;
+                        right: unset;
+                        border-radius: 100px;
+                        transition:  all 300ms ease-in-out; 
+                        box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+                    }
+                    &.boton-activo{
+                        background-color: orange;
+                        color: black;
+                        &::after{
+                            left: unset;
+                            right: 0;
+                        }
+                    }
+                    span{
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        display: block;
+                        background: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767px){
+
+    .navbar{
+        .container{
+            .titulo-logo{        
+                .text-commander{
+                    font-size: 1.6rem;
+                }
+            }
+
+            .navbar-nav a{
+                font-size: 1.5em;
+            }
+        }
+    }
+
+}
+
+
