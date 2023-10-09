@@ -27,37 +27,41 @@ const Nav = () => {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0"> 
                         <li className="nav-item">
                             <NavLink to='/' className='texto-nav'>
-                                <FormattedMessage
+                                Inicio
+                                {/* <FormattedMessage
                                     id='menu-inicio'
                                     defaultMessage='Inicio'
-                                />
+                                /> */}
                             </NavLink>
                             
                         </li>           
                         <li className="nav-item">
                             <NavLink to='/ResinaFilamento'>
-                            <FormattedMessage
+                                Servicios
+                            {/* <FormattedMessage
                                     id='menu-Servicio'
                                     defaultMessage='Servicio'
-                                />
+                                /> */}
                             </NavLink>
                             
                         </li>
                         <li className="nav-item">
                             <NavLink to='/Productos'>
-                                <FormattedMessage
+                                Productos
+                                {/* <FormattedMessage
                                     id='menu-Productos'
                                     defaultMessage='Productos'
-                                />    
+                                />     */}
                             </NavLink>
                             
                         </li>
                         <li className="nav-item">
                             <NavLink to='/Informacion'>
-                                <FormattedMessage
+                                Informacion
+                                {/* <FormattedMessage
                                     id='menu-Informacion'
                                     defaultMessage='Información'
-                                />
+                                /> */}
                             </NavLink>
                            
                         </li>
