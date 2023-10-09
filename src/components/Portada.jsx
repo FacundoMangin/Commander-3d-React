@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import header from './css/header.css'
+import h from "/src/components/css/header.css?inline";
 import {IntlProvider, FormattedMessage} from 'react-intl';
 import MensajesIngles from '../lang/en-US.json';
 import MensajesEspanol from '../lang/es-ES.json';
-import {langContext} from '/src/context/langContext.js';
+import { langContext } from "../context/langContext";
 
 const Portada = () => {
     const idioma = useContext(langContext);

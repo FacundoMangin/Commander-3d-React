@@ -7,7 +7,7 @@ import estadosUnidos from '../assets/estados-unidos.png';
 
 import {FormattedMessage} from 'react-intl';
 
-import { langContext } from './../context/langContext.js';
+import { langContext } from "./../context/langContext";
 
 const Nav = () => {
     const idioma = useContext(langContext);
@@ -83,7 +83,6 @@ const Nav = () => {
 
     );
 };
-
 
 
 export default Nav;
