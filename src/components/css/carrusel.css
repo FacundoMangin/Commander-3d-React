@@ -39,37 +39,37 @@ body #carrusel .contenedor .container .section-subtitulo {
   font-size: clamp(1rem, 3.5rem, 7vw);
   color: rgb(198, 53, 255);
 }
+body #carrusel .contenedor .container .swiper-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
 body #carrusel .contenedor .container .tranding-slider {
   height: 52rem;
   padding: 2rem 0;
   position: relative;
 }
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide {
-  width: 37rem;
-  height: 42rem;
-  position: relative;
-}
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-img img {
+body #carrusel .contenedor .container .tranding-slider .tranding-slide-img img {
   width: 37rem;
   height: 42rem;
   border-radius: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content {
+body #carrusel .contenedor .container .tranding-slider .tranding-slide-content {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
 }
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .precio-tarjeta {
+body #carrusel .contenedor .container .tranding-slider .tranding-slide-content .precio-tarjeta {
   position: absolute;
   top: 2rem;
   right: 2rem;
   color: #ffffff;
 }
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .tranding-slide-content-bottom {
+body #carrusel .contenedor .container .tranding-slider .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
@@ -79,12 +79,12 @@ body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding
   border-radius: 15px;
   border: 2px solid #d6d6d6;
 }
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .tranding-slide-content-bottom .numero-estrellas {
+body #carrusel .contenedor .container .tranding-slider .tranding-slide-content .tranding-slide-content-bottom .numero-estrellas {
   padding-top: 1rem;
   display: flex;
   gap: 1rem;
 }
-body #carrusel .contenedor .container .tranding-slider .swiper-wrapper .tranding-slide .tranding-slide-content .tranding-slide-content-bottom .numero-estrellas .icono-estrellas ion-icon {
+body #carrusel .contenedor .container .tranding-slider .tranding-slide-content .tranding-slide-content-bottom .numero-estrellas .icono-estrellas ion-icon {
   color: #ffffff;
 }
 body #carrusel .contenedor .container .tranding-slider .tranding-slider-control {

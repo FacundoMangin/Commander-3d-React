@@ -56,61 +56,60 @@ body {
                     color: $letras-subtitulo;
                 }
 
+                .swiper-slide {
+                    width: 37rem;
+                    height: 42rem;
+                    position: relative;
+                }
+
                 .tranding-slider {
                     height: 52rem;
                     padding: 2rem 0;
                     position: relative;
-
-                    .swiper-wrapper{
-                        .tranding-slide {
+                    .tranding-slide-img{
+                        img {
                             width: 37rem;
                             height: 42rem;
-                            position: relative;
+                            border-radius: 2rem;
+                            object-fit: cover;
+                        }
+                    }
+                    .tranding-slide-content {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        
+                        .precio-tarjeta {
+                            position: absolute;
+                            top: 2rem;
+                            right: 2rem;
+                            color: $white;
+                        }
+                        .tranding-slide-content-bottom {
+                            position: absolute;
+                            bottom: 2rem;
+                            left: 2rem;
+                            color: $white;
+                            background-color: #1b1b1bef;
+                            padding: 1rem;
+                            border-radius: 15px;
+                            border: 2px solid $Borde-boton;
 
-                            .tranding-slide-img{
-                                img {
-                                    width: 37rem;
-                                    height: 42rem;
-                                    border-radius: 2rem;
-                                    object-fit: cover;
-                                }
-                            }
-                            .tranding-slide-content {
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                right: 0;
-                                bottom: 0;
+                            .numero-estrellas {
+                                padding-top: 1rem;
+                                display: flex;
+                                gap: 1rem;
                                 
-                                .precio-tarjeta {
-                                    position: absolute;
-                                    top: 2rem;
-                                    right: 2rem;
+                                .icono-estrellas ion-icon {
                                     color: $white;
-                                }
-                                .tranding-slide-content-bottom {
-                                    position: absolute;
-                                    bottom: 2rem;
-                                    left: 2rem;
-                                    color: $white;
-                                    background-color: #1b1b1bef;
-                                    padding: 1rem;
-                                    border-radius: 15px;
-                                    border: 2px solid $Borde-boton;
-
-                                    .numero-estrellas {
-                                        padding-top: 1rem;
-                                        display: flex;
-                                        gap: 1rem;
-                                        
-                                        .icono-estrellas ion-icon {
-                                            color: $white;
-                                        }
-                                    }
                                 }
                             }
                         }
                     }
+                        
+                    
                     .tranding-slider-control {
                         position: relative;
                         bottom: 2rem;
