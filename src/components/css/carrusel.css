@@ -16,13 +16,13 @@ html {
 
 /* ---------------------------------------------------- */
 body #carrusel {
-  padding: 7.6rem 0;
+  padding: 4rem 0;
   background-color: #e8d5eb;
   border-top: 5px solid #f1c4f8;
 }
 body #carrusel .contenedor .container {
   max-width: 124rem;
-  padding: 0 1rem;
+  padding: 0px 1rem;
   margin: 0 auto;
 }
 body #carrusel .contenedor .container .centrar_texto {
