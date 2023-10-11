@@ -24,7 +24,7 @@ const Portada = () => {
                     <h2>Commander</h2>
                     <h3 className="header-subtitulo">"Impresiones en Resina y Filamento"</h3>
                 </section> 
-            </header>+
+            </header>
         </IntlProvider>
     );
 };
