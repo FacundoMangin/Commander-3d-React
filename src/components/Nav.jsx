@@ -13,7 +13,7 @@ const Nav = () => {
     const idioma = useContext(langContext);
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container">
                 <div className="titulo-logo">
                     <a id="nav-titulo" className="text-white text-commander">Commander 3D</a>
