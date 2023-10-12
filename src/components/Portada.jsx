@@ -12,7 +12,7 @@ const Portada = () => {
 
     return (
         <IntlProvider locale="en-US" messages={MensajesEspanol}>
-            <header>   
+            <header className='dark:bg-neutral-900'>   
                 <section className="textos-header">
                     <h1 id="header-titulo">Commander 3D</h1>
                     <h2 className="header-subtitulo" >
