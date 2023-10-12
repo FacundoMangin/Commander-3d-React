@@ -203,19 +203,7 @@ body {
 }
 
 
-@media (max-width:500px) {
-    body {
-        #carrusel{
-            .contenedor{
-                .container {
-                    .tranding-slider {
-                        height: 45rem;
-                    }
-                }
-            }
-        }
-    }
-}
+
 
 
 @media (max-width:500px) {
@@ -225,12 +213,12 @@ body {
                 .container {
                     .swiper-wrapper{
                         .tranding-slide {
-                        width: 28rem !important;
-                        height: 36rem !important;
+                        width: 35rem !important;
+                        height: 41rem !important;
                             .tranding-slide-img {
                                 img {
-                                width: 28rem !important;
-                                height: 36rem !important;
+                                width: 35rem !important;
+                                height: 41rem !important;
                                 }
                             }
                         }
@@ -252,8 +240,8 @@ body {
                             height: 30rem !important;
                             .tranding-slide-img{
                                 img {
-                                    width: 22rem !important;
-                                    height: 30rem !important;
+                                    width: 30rem !important;
+                                    height: 40rem !important;
                                 }
                             }
                         }

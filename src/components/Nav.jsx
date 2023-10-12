@@ -77,10 +77,7 @@ const Nav = () => {
                         </li>
                     </ul>
                 
-                    <button className="switch" id="switch">
-                        <span><i className="fa-solid fa-sun"></i></span>
-                        <span><i className="fa-solid fa-moon"></i></span>
-                    </button>    
+                       
                 </div>
             </div>
         </nav>
