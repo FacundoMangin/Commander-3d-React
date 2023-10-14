@@ -76,8 +76,6 @@ const Nav = () => {
                             </ul>
                         </li>
                     </ul>
-                    <button className='bg-white px3'>hola</button>
-                       
                 </div>
             </div>
         </nav>
