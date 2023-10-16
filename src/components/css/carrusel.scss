@@ -32,8 +32,8 @@ html {
 body {
     #carrusel {
         padding: 5.3rem 0;
-        background-color: $bg;
-        border-top: 5px solid $border;
+        border-top: 2px solid $border;
+        height: 100vh;
         
         .contenedor{
             .container {
@@ -50,10 +50,12 @@ body {
                     color: $letras-titulo;
                     padding: 2rem 0;
                     margin: 0px  !important;
+                    -webkit-text-stroke: 2px white;
                 }
                 .section-subtitulo {
-                    font-size:clamp(1rem, 3.5rem, 7vw);
+                    font-size:clamp(1rem, 4rem, 7vw);
                     color: $letras-subtitulo;
+                    -webkit-text-stroke: 0.5px white;
                 }
 
                 .swiper-slide {

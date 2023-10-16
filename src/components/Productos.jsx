@@ -22,9 +22,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 const Productos = () => {
     return (
 
-        
-
-        <section id="carrusel">
+        <section id="carrusel" className='bg-fuchsia-200  dark:bg-slate-950'>
             <div className="contenedor">
             <div className="container">
                 <h3 className="centrar_texto section-subtitulo">- Productos Populares -</h3>
@@ -254,7 +252,7 @@ const Productos = () => {
             </div>
             
             <div className="boton">
-                <a href="./galeria-impresion/galeria.html"> Mas Productos</a>
+                <a href="/#"> Mas Productos</a>
             </div>
             
             </div>

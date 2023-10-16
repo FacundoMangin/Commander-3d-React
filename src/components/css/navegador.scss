@@ -18,7 +18,7 @@ body {
         transition: all ease-in-out 250ms;
 
         .container{
-            height: auto !important;
+            
             .titulo-logo{
                 .text-commander{
                     display: flex;
@@ -59,7 +59,14 @@ body {
                         padding: 0;
                     }
                     .nav-item {
-                        
+                        .h-screen {
+                            height: 0px !important;
+                            button{
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                            }
+                        }
+
                         &:hover {
                             transform: scale(0.9);
                             transition: all 400ms ease;

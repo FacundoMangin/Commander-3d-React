@@ -17,8 +17,8 @@ html {
 /* ---------------------------------------------------- */
 body #carrusel {
   padding: 5.3rem 0;
-  background-color: #e8d5eb;
-  border-top: 5px solid #f1c4f8;
+  border-top: 2px solid #f1c4f8;
+  height: 100vh;
 }
 body #carrusel .contenedor .container {
   max-width: 124rem;
@@ -34,10 +34,12 @@ body #carrusel .contenedor .container .section-titulo {
   color: blueviolet;
   padding: 2rem 0;
   margin: 0px !important;
+  -webkit-text-stroke: 2px white;
 }
 body #carrusel .contenedor .container .section-subtitulo {
-  font-size: clamp(1rem, 3.5rem, 7vw);
+  font-size: clamp(1rem, 4rem, 7vw);
   color: rgb(198, 53, 255);
+  -webkit-text-stroke: 0.5px white;
 }
 body #carrusel .contenedor .container .swiper-slide {
   width: 37rem;

@@ -36,7 +36,7 @@ footer {
             text-align: center;
             align-items: center;
             h1 {
-                font-size: clamp(4rem, 8rem, 9vw);
+                font-size: clamp(3rem, 8rem, 9vw);
                 margin: 0px !important;
                 padding-top: 2rem;
                 font-weight: bold;
@@ -75,11 +75,14 @@ footer {
                 -moz-box-shadow: inset 7px 4px 38px -25px rgba(255,0,255,1);
                 box-shadow: inset 7px 4px 38px -25px rgba(255,0,255,1);
                 .red-social {
-                    justify-content: center;
-                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center !important;
+                    align-items: center !important;
                     text-align: center;
                     
                     .red-social-logo{
+                        width: 100%;
                         #facebook-color {
                             background-color: $color-facebook;
                         }

@@ -20,7 +20,7 @@ footer .contenedor-footer .footer-logo {
   align-items: center;
 }
 footer .contenedor-footer .footer-logo h1 {
-  font-size: clamp(4rem, 8rem, 9vw);
+  font-size: clamp(3rem, 8rem, 9vw);
   margin: 0px !important;
   padding-top: 2rem;
   font-weight: bold;
@@ -58,9 +58,14 @@ footer .contenedor-footer .contenedor-redes-sociales article {
   box-shadow: inset 7px 4px 38px -25px rgb(255, 0, 255);
 }
 footer .contenedor-footer .contenedor-redes-sociales article .red-social {
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
   text-align: center;
+}
+footer .contenedor-footer .contenedor-redes-sociales article .red-social .red-social-logo {
+  width: 100%;
 }
 footer .contenedor-footer .contenedor-redes-sociales article .red-social .red-social-logo #facebook-color {
   background-color: rgb(0, 89, 255);

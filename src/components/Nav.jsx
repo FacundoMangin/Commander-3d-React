@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 
 import '../components/css/navegador.css';
@@ -9,8 +9,27 @@ import {FormattedMessage} from 'react-intl';
 
 import { langContext } from "./../context/langContext";
 
-const Nav = () => {
+function Nav() {
     const idioma = useContext(langContext);
+    const [theme, setTheme] = useState(() => {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+    
+        return "light";
+      });
+    
+      useEffect(() => {
+        if (theme === "dark") {
+          document.querySelector("html").classList.add("dark");
+        } else {
+          document.querySelector("html").classList.remove("dark");
+        }
+      }, [theme]);
+    
+      const handleChangeTheme = () => {
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+      };
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
@@ -23,7 +42,7 @@ const Nav = () => {
                     <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0"> 
                         <li className="nav-item">
                             <NavLink to='/' className='texto-nav'>
@@ -35,7 +54,7 @@ const Nav = () => {
                             </NavLink>
                             
                         </li>           
-                        <li className="nav-item">
+                        <li className="nav-item ">
                             <NavLink to='/ResinaFilamento'>
                                 Servicios
                             {/* <FormattedMessage
@@ -74,6 +93,17 @@ const Nav = () => {
                                 <li><NavLink onClick={() => idioma.establecerLenguaje('es-ES')} className="dropdown-item" to="/opcion1"><img src={espana} alt="" />español</NavLink></li>
                                 <li><NavLink onClick={() => idioma.establecerLenguaje('en-US')}  className="dropdown-item" to="/opcion2"><img src={estadosUnidos} alt="" />Ingles</NavLink></li>
                             </ul>
+                        </li>
+
+                        <li className="nav-item">
+                            <div className="h-screen flex justify-center items-center dark:bg-neutral-900">
+                            <button
+                                className="bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 dark:bg-slate-950 dark:text-white dark:hover:bg-slate-900"
+                                onClick={()=>{handleChangeTheme()}}
+                            >
+                                Dark
+                            </button>
+                        </div>
                         </li>
                     </ul>
                 </div>

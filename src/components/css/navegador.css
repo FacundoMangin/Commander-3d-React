@@ -6,9 +6,6 @@ body .navbar {
   box-shadow: inset 7px 4px 38px -25px rgb(255, 0, 255);
   transition: all ease-in-out 250ms;
 }
-body .navbar .container {
-  height: auto !important;
-}
 body .navbar .container .titulo-logo .text-commander {
   display: flex;
   font-size: 2.5rem;
@@ -43,6 +40,13 @@ body .navbar .container #navbarSupportedContent .navbar-nav ahover {
 }
 body .navbar .container #navbarSupportedContent .navbar-nav .nav-link {
   padding: 0;
+}
+body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .h-screen {
+  height: 0px !important;
+}
+body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .h-screen button {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 body .navbar .container #navbarSupportedContent .navbar-nav .nav-item:hover {
   transform: scale(0.9);

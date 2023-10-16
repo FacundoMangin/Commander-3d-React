@@ -5,7 +5,10 @@
 /*---------------------------------------------------------------------------------------- */
 /*-------------------------- Imagen Diferencia entre "Resina" y "Filamento" --------------------------------- */
 /*---------------------------------------------------------------------------------------- */
-.sobre-nosotros .titulo-diferencia {
+.diferencia {
+  height: 100%;
+}
+.diferencia .sobre-nosotros .titulo-diferencia {
   color: blueviolet;
   font-weight: bold;
   padding: 15px;
@@ -16,7 +19,7 @@
   border-radius: 10px;
   font-family: "Rubik";
 }
-.sobre-nosotros .contenedor-sobre-nosotros {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,22 +27,22 @@
   height: 100%;
   margin-bottom: 1rem;
 }
-.sobre-nosotros .contenedor-sobre-nosotros .imagen-about-us {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .imagen-about-us {
   width: 40%;
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos {
   display: flex;
   justify-content: center;
   flex-direction: column; /*para que el texto se escriba uno bajo el otro*/
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-resina {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-resina {
   display: none;
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 {
-  font-size: clamp(1rem, 3.5rem, 3vw);
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 {
+  font-size: clamp(1rem, 3.5rem, 10vw);
   font-weight: bold;
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 span { /*circulo violeta*/
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 span { /*circulo violeta*/
   background: blueviolet;
   color: white;
   border-radius: 50%; /*para que sea redondo*/
@@ -51,23 +54,23 @@
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   margin-right: 10px;
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul {
   padding: 0.5rem 0rem 0rem 6rem;
   margin-bottom: 3rem !important;
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul li {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul li {
   padding-bottom: 0.3rem;
   font-family: "Rubik";
   font-size: clamp(1rem, 2rem, 1.5vw);
 }
-.sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-impresora-filamento {
+.diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-impresora-filamento {
   display: none;
 }
 
 /*----------------------------------------------------------- */
 @media screen and (max-width: 1000px) {
   .sobre-nosotros .titulo-diferencia {
-    font-size: clamp(3rem, 4.5rem, 5vw);
+    font-size: clamp(3rem, 4.5rem, 5vw) !important;
   }
   .sobre-nosotros .contenedor-sobre-nosotros {
     flex-direction: column;
@@ -84,25 +87,24 @@
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 { /*Tamaño del titulo*/
     color: #bb00ff;
-    font-size: clamp(2.5rem, 3.5rem, 9vw);
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 span { /*circulo violeta*/
-    display: none;
+    display: none !important;
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul {
-    padding: 0;
+    padding: 1rem 0 !important;
     margin-bottom: 3rem !important;
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul li {
     padding-bottom: 1rem;
     font-family: "Rubik";
-    font-size: clamp(1rem, 2rem, 4vw);
+    font-size: clamp(1rem, 2rem, 4vw) !important;
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos img { /*pequeña separacion de las imagenes con respecto a los titulos*/
     margin-bottom: 20px;
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-resina { /*Muestra la imagen de la impresora de resina*/
-    display: flex;
+    display: flex !important;
     width: 100%;
     min-width: 150px;
     max-width: 200px;
@@ -110,7 +112,7 @@
     align-items: center;
   }
   .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-impresora-filamento { /*Muestra la imagen de la impresora de filamento*/
-    display: flex;
+    display: flex !important;
     width: 100%;
     min-width: 150px;
     max-width: 200px;
