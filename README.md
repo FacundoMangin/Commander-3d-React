@@ -5,7 +5,7 @@ hechas con dos modelos distintos de impresoras.
 
 # __Tecnologias usadas para esta pagina__
 
- __JavaScrip - HTML - CSS - Bootstrap - Swiper__
+ __Vite - ReactJS - JavaScrip - HTML - CSS - Bootstrap - Swiper - Tailwind__
 
 
 
@@ -50,20 +50,14 @@ Imagine una pagina que muestre figuras impresas en 3D hechas por mi y mi compañ
 
 Se quito todo el CSS nativo y se implemento el uso de SASS
 
-# __Implementación JavaScript__
+# __Estapa REACT__
 
-- Se realizo un carrusel con JavaScript y la libreria Swipper (https://swiperjs.com/get-started).
-- Implementacion de 3 galerias para mostrar los productos.
-     
-     - Se uso la libreria lightgallery (https://www.lightgalleryjs.com/) para mostrar las imagen mas grandes al darle click con varias funciones extras:
-     
-     - (Zoom, Descargar, Presentar, Expandir, entre otros),, tambien muestra el precio y nombre de cada figura.
+Se creo el proyecto usando Vite
 
-- Se crearon efectos de aparicion al hacer scroll hacia abajo con otra libreria llamada Scroll Reveal (https://scrollrevealjs.org/)
-- Se creo una nav desplegable, la cual se esconde cuado se hace scroll hacia abajo y se muestra haciendo scroll hacia arriba.
-    
-    - Se implemento con una funcion y un evento que se le aplican a los estilos.
+Una vez creado el proyecto tuve que hacer varios cambios a mi pagina
 
-- Una implementacion muy util fue el modo oscuro, tambien llamado Dark mode.
-     
-     - Se creo con una funcion y un evento agregando clases al usar el evento click en un boton.
+Se utilizo el router
+
+Se creo un nuevo dark mode
+
+Se implemento el multilenguaje (No funciona todavia)
