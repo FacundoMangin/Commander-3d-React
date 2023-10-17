@@ -5,7 +5,7 @@ import Resina from '../assets/resina.png';
 
 const ResinaFilamento = () => {
     return (
-        <section className='diferencia'>
+        <section className='diferencia dark:bg-slate-900'>
             <div className="contenedor sobre-nosotros" id="diferencia-resina-filamento">
         
                 <h2 className="titulo-diferencia">Diferencia entre "Resina" y "Filamento"</h2>      

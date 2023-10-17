@@ -6,7 +6,7 @@
 /*-------------------------- Imagen Diferencia entre "Resina" y "Filamento" --------------------------------- */
 /*---------------------------------------------------------------------------------------- */
 .diferencia {
-  height: 100%;
+  height: 100vh;
 }
 .diferencia .sobre-nosotros .titulo-diferencia {
   color: blueviolet;
