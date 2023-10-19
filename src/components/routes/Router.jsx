@@ -13,10 +13,10 @@ const Router = () => {
                 
             </Nav>
             <Routes>
-                <Route path='/' element={<Portada></Portada>} ></Route>
-                <Route path='/ResinaFilamento' element={<ResinaFilamento></ResinaFilamento>} ></Route>
-                <Route path='/Productos' element={<Productos></Productos>} ></Route>
-                <Route path='/Informacion' element={<Informacion></Informacion>} ></Route>
+                <Route path='/' Component={Portada} ></Route>
+                <Route path='/resinaFilamento' Component={ResinaFilamento} ></Route>
+                <Route path='/productos' Component={Productos} ></Route>
+                <Route path='/informacion' Component={Informacion} ></Route>
             </Routes>
         </BrowserRouter>
     );

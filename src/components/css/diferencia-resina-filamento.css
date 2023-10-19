@@ -69,41 +69,44 @@
 
 /*----------------------------------------------------------- */
 @media screen and (max-width: 1000px) {
-  .sobre-nosotros .titulo-diferencia {
+  .diferencia {
+    height: 100%;
+  }
+  .diferencia .sobre-nosotros .titulo-diferencia {
     font-size: clamp(3rem, 4.5rem, 5vw) !important;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros {
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .imagen-about-us {
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .imagen-about-us {
     display: none;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos {
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos {
     width: 100%;
     align-items: center;
     text-align: center;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 { /*Tamaño del titulo*/
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 { /*Tamaño del titulo*/
     color: #bb00ff;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 span { /*circulo violeta*/
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos h3 span { /*circulo violeta*/
     display: none !important;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul {
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul {
     padding: 1rem 0 !important;
     margin-bottom: 3rem !important;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul li {
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos ul li {
     padding-bottom: 1rem;
     font-family: "Rubik";
     font-size: clamp(1rem, 2rem, 4vw) !important;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos img { /*pequeña separacion de las imagenes con respecto a los titulos*/
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos img { /*pequeña separacion de las imagenes con respecto a los titulos*/
     margin-bottom: 20px;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-resina { /*Muestra la imagen de la impresora de resina*/
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-resina { /*Muestra la imagen de la impresora de resina*/
     display: flex !important;
     width: 100%;
     min-width: 150px;
@@ -111,7 +114,7 @@
     justify-content: center;
     align-items: center;
   }
-  .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-impresora-filamento { /*Muestra la imagen de la impresora de filamento*/
+  .diferencia .sobre-nosotros .contenedor-sobre-nosotros .contenidos-textos .imagen-impresora-filamento { /*Muestra la imagen de la impresora de filamento*/
     display: flex !important;
     width: 100%;
     min-width: 150px;

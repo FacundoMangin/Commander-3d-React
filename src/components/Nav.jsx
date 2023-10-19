@@ -1,118 +1,186 @@
 import React, {useContext, useState, useEffect} from 'react';
-import { NavLink } from 'react-router-dom';
 
-import '../components/css/navegador.css';
-import espana from '../assets/espana.png';
-import estadosUnidos from '../assets/estados-unidos.png';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
+import {MenuItem} from '@mui/material';
 
-import {FormattedMessage} from 'react-intl';
 
-import { langContext } from "./../context/langContext";
+import styled from 'styled-components'
+import BurguerButton from './BurguerButton'
 
-function Nav() {
-    const idioma = useContext(langContext);
-    const [theme, setTheme] = useState(() => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          return "dark";
-        }
-    
-        return "light";
-      });
-    
-      useEffect(() => {
-        if (theme === "dark") {
-          document.querySelector("html").classList.add("dark");
-        } else {
-          document.querySelector("html").classList.remove("dark");
-        }
-      }, [theme]);
-    
-      const handleChangeTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-      };
 
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light">
-            <div className="container">
-                <div className="titulo-logo">
-                    <a id="nav-titulo" className="text-white text-commander">Commander 3D</a>
-                </div>
-                <div className="d-flex justify-content-end">
-                    <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div className="navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0"> 
-                        <li className="nav-item">
-                            <NavLink to='/' className='texto-nav'>
-                                Inicio
-                                {/* <FormattedMessage
-                                    id='menu-inicio'
-                                    defaultMessage='Inicio'
-                                /> */}
-                            </NavLink>
-                            
-                        </li>           
-                        <li className="nav-item ">
-                            <NavLink to='/ResinaFilamento'>
-                                Servicios
-                            {/* <FormattedMessage
-                                    id='menu-Servicio'
-                                    defaultMessage='Servicio'
-                                /> */}
-                            </NavLink>
-                            
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/Productos'>
-                                Productos
-                                {/* <FormattedMessage
-                                    id='menu-Productos'
-                                    defaultMessage='Productos'
-                                />     */}
-                            </NavLink>
-                            
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/Informacion'>
-                                Informacion
-                                {/* <FormattedMessage
-                                    id='menu-Informacion'
-                                    defaultMessage='Información'
-                                /> */}
-                            </NavLink>
-                           
-                        </li>
-                        <li className="nav-item dropdown">
-                            
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Lenguaje
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><NavLink onClick={() => idioma.establecerLenguaje('es-ES')} className="dropdown-item" to="/opcion1"><img src={espana} alt="" />español</NavLink></li>
-                                <li><NavLink onClick={() => idioma.establecerLenguaje('en-US')}  className="dropdown-item" to="/opcion2"><img src={estadosUnidos} alt="" />Ingles</NavLink></li>
-                            </ul>
-                        </li>
+const drawerWidth = 240;
+const navItems = ['Inicio', 'Servicios', 'Productos', 'Informacion'];
 
-                        <li className="nav-item">
-                            <div className="h-screen flex justify-center items-center dark:bg-neutral-900">
-                            <button
-                                className="bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 dark:bg-slate-950 dark:text-white dark:hover:bg-slate-900"
-                                onClick={()=>{handleChangeTheme()}}
-                            >
-                                Dark
-                            </button>
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+function Nav(props) {
 
-    );
-};
+  const [clicked, setClicked] = useState(false)
+  const handleClick = () => {
+    //cuando esta true lo pasa a false y vice versa
+    setClicked(!clicked)
+  }
+
+  const [theme, setTheme] = useState(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+
+    return "light";
+  });
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.querySelector("html").classList.add("dark");
+    } else {
+      document.querySelector("html").classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleChangeTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+
+
+  
+
+
+
+  const navigate = useNavigate();
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  
+
+  const handleCloseNavMenu = (event) => {
+    let selectedOption = event.target.innerHTML;
+    if (selectedOption.length > 15) {
+        let textLenght = selectedOption.indexOf('<');
+        selectedOption = selectedOption.substring(0, textLenght);
+    }
+
+    switch (selectedOption) {
+        case 'Inicio':
+            navigate("/");
+            break;
+        case 'Servicios':
+            navigate("/resinaFilamento");
+            break;
+        case 'Productos':
+            navigate("/productos");
+            break;
+        case 'Informacion':
+          navigate("/informacion");
+          break;
+        default:
+            console.log("Error");
+            break;
+    }
+  };
+
+
+
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        Commander 3D
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <MenuItem onClick={handleCloseNavMenu} key={item}>
+          <Typography textAlign="center">{item}</Typography>
+        </MenuItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  const container = window !== undefined ? () => window().document.body : undefined;
+
+  return (
+    <>
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar component="nav">
+        <Toolbar>
+          <IconButton 
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            Commander 3D
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button onClick={handleCloseNavMenu} key={item} sx={{ color: '#fff' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
+
+          <button
+                className="bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 dark:bg-slate-950 dark:text-white dark:hover:bg-slate-900"
+                onClick={()=>{handleChangeTheme()}}
+            >
+                Dark
+            </button>
+
+        </Toolbar>
+      </AppBar>
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </Box>
+    <div className='burguer'>
+          <BurguerButton clicked={clicked} handleClick={handleClick} />
+        </div>
+        <BgDiv className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
+  </>
+  );
+}
 
 
 export default Nav;
-

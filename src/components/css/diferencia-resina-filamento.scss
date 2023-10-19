@@ -16,74 +16,74 @@
 /*---------------------------------------------------------------------------------------- */
 .diferencia{
     height: 100vh;
-.sobre-nosotros{
-    .titulo-diferencia{
-        color: $letras-titulo; 
-        font-weight:bold; 
-        padding:15px; 
-        margin-top:1.2em;
-        margin-bottom:40px;
-        text-align:center;
-        font-size: clamp(1rem, 5.5rem, 4.5vw);
-        border-radius:10px;
-        font-family: 'Rubik';  
-    }
-
-    .contenedor-sobre-nosotros{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-bottom: 1rem;
-
-        .imagen-about-us{
-                width: 40%;
+    .sobre-nosotros{
+        .titulo-diferencia{
+            color: $letras-titulo; 
+            font-weight:bold; 
+            padding:15px; 
+            margin-top:1.2em;
+            margin-bottom:40px;
+            text-align:center;
+            font-size: clamp(1rem, 5.5rem, 4.5vw);
+            border-radius:10px;
+            font-family: 'Rubik';  
         }
 
-        .contenidos-textos{
-            display: flex;    
+        .contenedor-sobre-nosotros{
+            display: flex;
             justify-content: center;
-            flex-direction: column;  /*para que el texto se escriba uno bajo el otro*/
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 1rem;
 
-            .imagen-resina{
-                display: none;
+            .imagen-about-us{
+                    width: 40%;
             }
 
-            h3{
-                font-size: clamp(1rem, 3.5rem, 10vw);
-                font-weight:bold;
+            .contenidos-textos{
+                display: flex;    
+                justify-content: center;
+                flex-direction: column;  /*para que el texto se escriba uno bajo el otro*/
+
+                .imagen-resina{
+                    display: none;
+                }
+
+                h3{
+                    font-size: clamp(1rem, 3.5rem, 10vw);
+                    font-weight:bold;
+                    
+                    span{     /*circulo violeta*/
+                        background:$fondo-circulo-violeta ;
+                        color: $numero-circulo-violet;
+                        border-radius: 50%;     /*para que sea redondo*/
+                        display: inline-block;  /*propiedad de bloque*/
+                        text-align: center;
+                        width: clamp(1rem, 5rem, 4vw);
+                        height: clamp(1rem, 5rem, 4vw);
+                        padding: 1px;
+                        box-shadow: $sombra-circulo-violeta;
+                        margin-right: 10px;
+                    }
+                }
                 
-                span{     /*circulo violeta*/
-                    background:$fondo-circulo-violeta ;
-                    color: $numero-circulo-violet;
-                    border-radius: 50%;     /*para que sea redondo*/
-                    display: inline-block;  /*propiedad de bloque*/
-                    text-align: center;
-                    width: clamp(1rem, 5rem, 4vw);
-                    height: clamp(1rem, 5rem, 4vw);
-                    padding: 1px;
-                    box-shadow: $sombra-circulo-violeta;
-                    margin-right: 10px;
+                ul{
+                    padding: 0.5rem 0rem 0rem 6rem;
+                    margin-bottom: 3rem !important;
+                    li{
+                        padding-bottom: 0.3rem;
+                        font-family: 'Rubik';
+                        font-size: clamp(1rem, 2rem, 1.5vw);
+                    }
                 }
-            }
-            
-            ul{
-                padding: 0.5rem 0rem 0rem 6rem;
-                margin-bottom: 3rem !important;
-                li{
-                    padding-bottom: 0.3rem;
-                    font-family: 'Rubik';
-                    font-size: clamp(1rem, 2rem, 1.5vw);
-                }
-            }
 
-            .imagen-impresora-filamento{
-                display: none;
+                .imagen-impresora-filamento{
+                    display: none;
+                }
             }
         }
     }
-}
 }
 
 
@@ -96,6 +96,8 @@
 
 
 @media screen and (max-width: 1000px){
+.diferencia{
+    height: 100%;    
     .sobre-nosotros{
         .titulo-diferencia{
             font-size: clamp(3rem, 4.5rem, 5vw) !important; 
@@ -156,7 +158,7 @@
         }
     }
 }
-
+}
 
 
 
