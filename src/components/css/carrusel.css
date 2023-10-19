@@ -40,6 +40,7 @@ body #carrusel .contenedor .container .section-subtitulo {
   font-size: clamp(1rem, 4rem, 7vw);
   color: rgb(198, 53, 255);
   -webkit-text-stroke: 0.5px white;
+  padding-top: 5rem;
 }
 body #carrusel .contenedor .container .swiper-slide {
   width: 37rem;

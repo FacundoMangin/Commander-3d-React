@@ -1,120 +1,21 @@
-/*----------------------------------------------------------------------- */
-/*-------------------------- NAVEGACION --------------------------------- */
-/*----------------------------------------------------------------------- */
-body .navbar {
-  background: rgba(92, 0, 95, 0.993);
-  box-shadow: inset 7px 4px 38px -25px rgb(255, 0, 255);
-  transition: all ease-in-out 250ms;
-}
-body .navbar .container .titulo-logo .text-commander {
-  display: flex;
-  font-size: 2.5rem;
-  font-size: clamp(1.6rem, 2.5rem, 9vw);
-  text-transform: uppercase;
-  color: white;
-  font-family: "Lilita One";
-  text-decoration: none;
-  text-shadow: 2px 2px 4px rgb(0, 0, 0);
-}
-body .navbar .container .navbar-toggler {
-  font-size: clamp(1rem, 2rem, 2.5vw);
-}
-body .navbar .container #navbarSupportedContent .navbar-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav a {
-  text-decoration: none;
-  font-size: clamp(1rem, 1.5rem, 1.5vw);
-  text-transform: uppercase;
-  font-weight: bold;
-  color: white;
-  font-family: "Rubik";
-  text-shadow: 2px 2px 4px rgb(0, 0, 0);
-}
-body .navbar .container #navbarSupportedContent .navbar-nav ahover {
-  color: rgba(250, 108, 255, 0.993);
-  transition: all 300ms ease-in-out;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-link {
-  padding: 0;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .h-screen {
-  height: 0px !important;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .h-screen button {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item:hover {
-  transform: scale(0.9);
-  transition: all 400ms ease;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .dropdown-menu {
-  background-color: #583f69 !important;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .dropdown-menu li:hover {
-  transform: scale(1.1);
-  transition: all 400ms ease;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .dropdown-menu li a {
-  font-size: 1.3rem !important;
-}
-body .navbar .container #navbarSupportedContent .navbar-nav .nav-item .dropdown-menu li a img {
-  width: 1.8rem;
-  padding-right: 0.3rem;
-}
-body .navbar .container #navbarSupportedContent .switch {
-  background-color: #343d5b;
-  border-radius: 1000px;
-  border: none;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-}
-body .navbar .container #navbarSupportedContent .switch::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background: white;
-  top: 0;
-  left: 0;
-  right: unset;
-  border-radius: 100px;
-  transition: all 300ms ease-in-out;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-}
-body .navbar .container #navbarSupportedContent .switch.boton-activo {
-  background-color: orange;
-  color: black;
-}
-body .navbar .container #navbarSupportedContent .switch.boton-activo::after {
-  left: unset;
-  right: 0;
-}
-body .navbar .container #navbarSupportedContent .switch span {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  display: block;
-  background: none;
-  color: white;
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+  background-color: blueviolet !important;
 }
 
-@media screen and (max-width: 767px) {
-  .navbar .container .titulo-logo .text-commander {
-    font-size: 1.6rem;
-  }
-  .navbar .container .navbar-nav a {
-    font-size: 1.5em;
-  }
-}/*# sourceMappingURL=navegador.css.map */
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+  background-color: rgb(234, 216, 252) !important;
+}
+
+.css-rtpxwx-MuiTypography-root {
+font-size: 2rem !important;
+font-weight: bold !important;
+}
+
+.css-1uwgr7b-MuiTypography-root {
+  font-size: 1.5rem !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root{
+  width: 3rem !important;
+  height: 3rem !important;
+}

@@ -18,48 +18,14 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import {MenuItem} from '@mui/material';
 
+import '../components/css/navegador.css';
 
-import styled from 'styled-components'
-import BurguerButton from './BurguerButton'
 
 
 const drawerWidth = 240;
 const navItems = ['Inicio', 'Servicios', 'Productos', 'Informacion'];
 
 function Nav(props) {
-
-  const [clicked, setClicked] = useState(false)
-  const handleClick = () => {
-    //cuando esta true lo pasa a false y vice versa
-    setClicked(!clicked)
-  }
-
-  const [theme, setTheme] = useState(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-
-    return "light";
-  });
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.querySelector("html").classList.add("dark");
-    } else {
-      document.querySelector("html").classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
-
-
-
-  
-
-
-
   const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -118,8 +84,7 @@ function Nav(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <>
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
@@ -133,27 +98,19 @@ function Nav(props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
+            variant="h3"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1,fontWeight: 'bold', display: { xs: 'none', sm: 'block' } }}
           >
             Commander 3D
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button onClick={handleCloseNavMenu} key={item} sx={{ color: '#fff' }}>
+              <Button onClick={handleCloseNavMenu} key={item} sx={{ color: '#fff', fontWeight: 'bold', fontSize:'1.5rem'}}>
                 {item}
               </Button>
             ))}
           </Box>
-
-          <button
-                className="bg-slate-200 px-4 py-2 rounded hover:bg-slate-300 dark:bg-slate-950 dark:text-white dark:hover:bg-slate-900"
-                onClick={()=>{handleChangeTheme()}}
-            >
-                Dark
-            </button>
-
         </Toolbar>
       </AppBar>
       <nav>
@@ -165,7 +122,7 @@ function Nav(props) {
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          sx={{
+          sx={{ 
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
@@ -174,11 +131,6 @@ function Nav(props) {
         </Drawer>
       </nav>
     </Box>
-    <div className='burguer'>
-          <BurguerButton clicked={clicked} handleClick={handleClick} />
-        </div>
-        <BgDiv className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
-  </>
   );
 }
 
