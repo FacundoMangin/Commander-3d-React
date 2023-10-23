@@ -22,5 +22,6 @@ export const ThemeContextProvider: FC<PropsWithChildren> = ({ children }) => {
 };
 
 export const useThemeContext = () => {
+  localStorage.setItem("modoDark")
   return useContext(ThemeContext);
 };
