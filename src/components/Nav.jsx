@@ -20,7 +20,7 @@ import {MenuItem} from '@mui/material';
 
 import '../components/css/navegador.css';
 
-
+import NightModeToggle from "./NightModeToggle.tsx";
 
 const drawerWidth = 240;
 const navItems = ['Inicio', 'Servicios', 'Productos', 'Informacion'];
@@ -111,6 +111,7 @@ function Nav(props) {
               </Button>
             ))}
           </Box>
+          <NightModeToggle />
         </Toolbar>
       </AppBar>
       <nav>

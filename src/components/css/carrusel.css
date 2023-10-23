@@ -18,7 +18,8 @@ html {
 body #carrusel {
   padding: 5.3rem 0;
   border-top: 2px solid #f1c4f8;
-  height: 100vh;
+  height: 100%;
+  background-color: default;
 }
 body #carrusel .contenedor .container {
   max-width: 124rem;

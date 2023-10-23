@@ -6,12 +6,11 @@ import "./css/header.css";
 const Portada = () => {
 
     return (
-            <header className='dark:bg-neutral-900'>   
+            <header >   
                 <section className="textos-header">
                     <h1 id="header-titulo">Commander 3D</h1>
-                    <h2 className="header-subtitulo" >
-                    <h2 class="titulo-diferencia">Diferencia entre "Resina" y "Filamento"</h2>
-                    </h2>
+                    <h2 className="titulo-diferencia">Diferencia entre "Resina" y "Filamento"</h2>
+                    
                 </section>
                 <section className="titulo-logo-celular">
                     <h1>3D</h1>

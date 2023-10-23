@@ -8,13 +8,19 @@ import './app.css'
 import Router from './components/routes/Router'
 import './components/css/main.css';
 
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { useThemeContext } from "./components/context/ThemeContextProvider.tsx";
+
+
 
 function App() {
-
+  const { theme } = useThemeContext();
+  
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Router/>
-    </>
+    </ThemeProvider>
   )
 }
 

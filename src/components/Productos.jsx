@@ -22,7 +22,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 const Productos = () => {
     return (
 
-        <section id="carrusel" className='bg-fuchsia-200  dark:bg-slate-950'>
+        <section id="carrusel">
             <div className="contenedor">
             <div className="container">
                 <h3 className="centrar_texto section-subtitulo">- Productos Populares -</h3>

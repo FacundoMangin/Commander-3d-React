@@ -33,7 +33,8 @@ body {
     #carrusel {
         padding: 5.3rem 0;
         border-top: 2px solid $border;
-        height: 100vh;
+        height: 100%;
+        background-color: default;
         
         .contenedor{
             .container {
