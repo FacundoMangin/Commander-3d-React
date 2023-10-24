@@ -6,8 +6,14 @@ export const useColorTheme = () => {
   const [mode, setMode] = React.useState<PaletteMode>("light");
 
   const toggleColorMode = () =>
-    setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+    // setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      setMode((prevMode) => {
+        const newMode = prevMode === "light" ? "dark" : "light";
+        localStorage.setItem("modoDark", newMode);
+        return newMode;
+      });
 
+    
   // const modifiedTheme = React.useMemo(
   //   () =>
   //     createTheme({
