@@ -3,6 +3,7 @@
 /*-------------------------Pantallas Grandes----------------------*/
 /*----------------------------------------------------------------*/
 footer {
+  height: 100%;
   background: #17001a;
   border-top: 5px solid rgba(92, 0, 95, 0.685);
   border-bottom: 5px solid rgba(92, 0, 95, 0.685);
@@ -117,6 +118,15 @@ footer .developer {
   color: rgba(255, 255, 255, 0.7882352941);
 }
 
+@media screen and (max-width: 1499px) {
+  footer {
+    height: 100%;
+    background: #17001a;
+    border-top: 5px solid rgba(92, 0, 95, 0.685);
+    border-bottom: 5px solid rgba(92, 0, 95, 0.685);
+    font-family: "Rubik";
+  }
+}
 @media screen and (max-width: 1281px) {
   footer .contenedor-footer {
     padding: 5% 0 5% 0;

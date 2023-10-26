@@ -22,6 +22,7 @@
 
 
 footer {
+    height: 100%;
 	background: $color-fondo-footer;
 	border-top: 5px solid $color-borde-footer;
 	border-bottom: 5px solid $color-borde-footer;
@@ -139,6 +140,16 @@ footer {
     }
 }
 
+
+@media screen and (max-width: 1499px) {
+    footer {
+        height: 100%;
+        background: $color-fondo-footer;
+        border-top: 5px solid $color-borde-footer;
+        border-bottom: 5px solid $color-borde-footer;
+        font-family: $font-family_1;
+    }
+}
 
 
 
